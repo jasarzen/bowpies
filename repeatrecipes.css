@@ -1,0 +1,320 @@
+
+/* General */
+body{
+    background-color: #c97b63;
+    margin:0px;
+    font-family:'Courier New', monospace;;
+    box-sizing: border-box;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 20px 0 20px;
+    max-width: 900px;
+}
+
+h1 {
+    font-size: 48px;
+    margin: 0 0 16px 0;
+  }
+
+h2 {
+    font-weight: 300;
+    font-size: 24px;
+    margin: 0 0 16px 0;
+  }
+
+
+.nav {
+  height: 60px;
+  width: 100%;
+  background-color: #5db3cc;
+  position: relative;
+}
+
+.nav > .nav-header {
+  display: inline;
+}
+
+.nav > .nav-header > .nav-title {
+  display: inline-block;
+  font-size: 22px;
+  color: #fff;
+  padding: 20px 10px 10px 40px;
+}
+
+.nav > .nav-btn {
+  display: none;
+}
+
+.nav > .nav-links {
+  display: inline;
+  float: right;
+  font-size: 18px;
+}
+
+.nav > .nav-links > a {
+  display: inline-block;
+  padding: 20px 40px 13px 10px;
+  text-decoration: none;
+  color: #ffddc1;
+  border-radius: 7px;
+}
+
+.nav > .nav-links > a:hover {
+  background-color: #91e5ff;
+  text-decoration: underline;
+}
+
+.nav > .nav-links > a:active {
+  background-color: #ffddc1;
+  color: #5db3cc;
+}
+
+.nav > #nav-check {
+  display: none;
+}
+
+.nav-title{
+   font-family:'Courier New', monospace;;
+   color: #c97b63;
+}
+
+@media (max-width:600px) {
+  .nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+  .nav > .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+  }
+  .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+    background-color: #c97b63;
+  }
+  .nav > .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid #eee;
+  }
+  .nav > .nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: #c97b63;
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 50px;
+    left: 0px;
+    z-index:1
+  }
+  .nav > .nav-links > a {
+    display: block;
+    width: 100%;
+  }
+  .nav > #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+  }
+  .nav > #nav-check:checked ~ .nav-links {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+  }
+}
+
+/* Responsive Header */
+
+/* @media screen and (min-width:480px) and (max-width: 800px) {
+    
+}   */
+
+/* THE LARGE GRID Format */
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+.item {
+    width: 32%;
+    padding-bottom: 18%; /* 32:18, i.e. 16:9 */
+    margin-bottom: 2%; /* (100-32*3)/2 */
+}
+
+.post-content-wrapper {
+
+    margin-bottom: 2em;
+    position: relative;
+    width: 96%;
+    margin: 2%;
+    background-color: #c97b63;
+    border-radius: 7px;
+    box-sizing: border-box;
+}
+
+.flex5 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+.child {
+    border-radius: 3px;
+    background-color: #ffddc1;
+    border: 10px solid #c5ffff;
+    box-sizing: border-box;
+    height: 400px;
+    width: 400px;
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.flex {
+    background-color: #ffab91;
+    border-radius: 3px;
+    padding: 20px;
+}
+
+.flex5-child {
+    width: 32%;
+    padding: 2%, 2%, 2%, 2%;
+    margin-bottom: 2%;
+}
+
+
+
+/* The Grid Images */
+#upperLeft{
+    background-image: url('apple.jpg');
+}
+
+
+#upperMiddle{
+    background-image: url('blueberries.jpg');
+
+}
+
+#upperRight{
+    background-image: url('cherries.jpg');
+}
+
+#middleLeft{
+    background-image: url('peaches.jpg')
+}
+
+#middleMiddle{
+    background-image: url('keylimes.jpg')
+}
+
+#middleRight{
+    background-image: url('pumpkin.png')
+}
+
+#bottomLeft{
+    background-image: url('pecans.jpg')
+}
+
+#bottomMiddle{
+    background-image: url('coconuts.jpg')
+}
+
+#bottomRight{
+    background-image: url('strawberries.jpg')
+}
+
+
+/* Button */
+
+.buttonSection{
+    background:#549DA0;
+    color:#FFFFFF;
+    height: 200px;
+    display: flex;
+    width: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn {
+    display: inline-block;
+    color: #5db3cc;
+    font-weight: 500;
+    font-size: 40px;
+    background: #ffddc1;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px 15px;
+}
+.btn:hover {
+    background: #91e5ff;
+}
+
+ /* Footer */
+ footer {
+    background: #ffddc1;
+    padding: 32px 0;
+    text-align: center;
+    color: #c97b63;
+    font-size: 12px;
+}
+footer ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+footer li {
+    display: inline-block;
+}
+footer li a {
+    padding: 6px;
+    font-size: 14px;
+    text-decoration: none;
+    color: #c97b63;
+}
+footer li a:hover {
+    color: white;
+}
+
+
+/* Small Grid Format */
+@media screen and (min-width: 10px) and (max-width: 400px) {
+
+
+    .flex5 {
+        display: block;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        align-items: center;
+        justify-content: center;
+    }
+
+    .flex5-child {
+        width: 100%;
+        padding: 0%;
+        margin: 5px, 0px;
+    }
+
+    footer {
+        padding: 30px 0 10px 0;
+    }
+    footer li {
+        display: block;
+        margin: 5px 0;
+    }
+    
+    }
+
+
+
+
